@@ -10,6 +10,7 @@ defmodule PrimeFactors do
   @spec factors_for(pos_integer) :: [pos_integer]
   def factors_for(number) do
     factor(number, 2, [])
+    |> Enum.reverse()
   end
 
   defp factor(1, _, acc), do: acc
